@@ -8,7 +8,7 @@ function myFunction() {
   
   var text = "abcdefghijklmnop";
   var key = "xyz";
-  
+
   // add a couple of events
   trace.begin('hmac');
   
@@ -23,7 +23,7 @@ function myFunction() {
       
       
     trace.end('hmac256');
-    
+   
     trace.begin ('hmac512');
     
       for (var i = 0 ; i < LOOPSIZE ; i++) {
@@ -31,7 +31,7 @@ function myFunction() {
         trace.counter ("count512", {args:{count:i,random:Math.random()*LOOPSIZE}});
       }
       
-    trace.end('hmac512');
+    trace.end('hmac512',{args:{success:true}});
 
   trace.end('hmac');
 
