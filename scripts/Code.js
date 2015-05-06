@@ -10,11 +10,11 @@ function myFunction() {
   var key = "xyz";
 
   // add a couple of events
-  trace.begin('hmac');
+  trace.start('hmac');
   
     var LOOPSIZE = 1000;
   
-    trace.begin('hmac256');
+    trace.start('hmac256');
     
       for (var i = 0 ; i < LOOPSIZE ; i++) {
         Utilities.computeHmacSha256Signature(text, key);
@@ -22,18 +22,18 @@ function myFunction() {
       }
       
       
-    trace.end('hmac256');
+    trace.stop('hmac256');
    
-    trace.begin ('hmac512');
+    trace.start ('hmac512');
     
       for (var i = 0 ; i < LOOPSIZE ; i++) {
         Utilities.computeHmacSignature(Utilities.MacAlgorithm.HMAC_SHA_512, text, key);
         trace.counter ("count512", {args:{count:i,random:Math.random()*LOOPSIZE}});
       }
       
-    trace.end('hmac512',{args:{success:true}});
+    trace.stop('hmac512',{args:{success:true}});
 
-  trace.end('hmac');
+  trace.stop('hmac');
 
   trace.dump("/Published Scripts/tracing");
   
