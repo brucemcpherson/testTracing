@@ -1,0 +1,16 @@
+{
+  "timeZone": "Europe/London",
+  "dependencies": {
+    "enabledAdvancedServices": [{
+      "userSymbol": "Drive",
+      "serviceId": "drive",
+      "version": "v2"
+    }],
+    "libraries": [{
+      "userSymbol": "cChromeTrace",
+      "libraryId": "18DUgAypAyUNTeHmCVDHtiqrTFc9ovMKFQ70bFOMgJrB-ho49Z0UC-utu",
+      "version": "5"
+    }]
+  },
+  "exceptionLogging": "STACKDRIVER"
+}
